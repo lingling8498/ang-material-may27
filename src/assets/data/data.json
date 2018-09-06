@@ -1,0 +1,17 @@
+[
+    {
+        "img": "assets/images/kitten1.jpeg",
+        "description": "Description: kitten1.jpeg",
+        "liked": "1"
+    },
+    {
+        "img": "assets/images/kitten2.jpg",
+        "description": "Description: kitten2.jpg",
+        "liked": "0"
+    },
+    {
+        "img": "assets/images/kitten3.jpeg",
+        "description": "Description: kitten3.jpeg",
+        "liked": "0"
+    }
+]

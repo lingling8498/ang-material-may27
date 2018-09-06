@@ -1,20 +1,161 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<mat-toolbar color="primary">
+  <span>GameViewer</span>
+  <span class="spacer"></span>
+  <!-- <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu_vert</mat-icon>menu</button> -->
+ 
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>fingerprint</mat-icon>
+      <span>Login</span>
+    </button>
+    <button mat-menu-item disabled>
+        <mat-icon>announcement</mat-icon>
+        <span>Issues</span>
+      </button>
+      <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu_vert</mat-icon></button>
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Tabs with Text</h2>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Tab 1">
+        <div class="demo-tab-content">
+          Lorem ipsum dolor sit amet.....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 2">
+        <div class="demo-tab-content">
+          Lorem ipsum dolor sit amet.....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 3" disabled>
+        No content
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        <div class="demo-tab-content">
+          Lorem ipsum dolor sit amet.....
+          <br />
+          <br />
+          Lorem ipsum dolor site amet, consectet....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 5">
+        No content
+      </mat-tab>
+    </mat-tab-group>
+      
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Tabs with icon labels</h2>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Tab 1">
+        <ng-template mat-tab-label>
+          <mat-icon>security</mat-icon>
+        </ng-template>
+        <div class="demo-tab-content">
+          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 2">
+        <ng-template mat-tab-label>
+          <mat-icon>attach_file</mat-icon>
+        </ng-template>
+        <div class="demo-tab-content">
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 3" disabled>
+        <ng-template mat-tab-label>
+          <mat-icon>block</mat-icon>
+        </ng-template>
+        No content
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        <ng-template mat-tab-label>
+          <mat-icon>loop</mat-icon>
+        </ng-template>
+        <div class="demo-tab-content">
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.....
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.....
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        <ng-template mat-tab-label>
+          <mat-icon>build</mat-icon>
+        </ng-template>
+        No content
+      </mat-tab>
+      <mat-tab label="thum down">
+        <ng-template mat-tab-label>
+          <mat-icon>thumb_down</mat-icon>
+        </ng-template>
+        No content
+      </mat-tab>
+      <mat-tab label="thum up">
+        <ng-template mat-tab-label>
+          <mat-icon>thumb_up</mat-icon>
+        </ng-template>
+        No content
+      </mat-tab>
+    </mat-tab-group>
+      
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Gallery</h2>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Gallery">
+        <mat-card *ngFor="let screenshot of spaceScreens; let i = index">
+          <img mat-card-image src="{{ screenshot.img }}">
+          <mat-card-content>
+            <p>{{ screenshot.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="likeMe(i)">
+              <i class="material-icons mat-18" [class.red-color]="screenshot.liked == '1'">favorite</i> LIKE
+            </button>
+            <button mat-button (click)="deleteMe(i)">
+              <i class="material-icons mat-18">delete</i> DELETE
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="Settings">
+        <div id="page-pading">
+          <h1>
+            Settings
+          </h1>
+          <p>Here you can control the various settings associated with your app.</p>
+          <label>Number of Thumbnails</label>
+          <mat-slider showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18"></mat-slider>
+          <br />
+          <mat-slide-toggle>Some setting</mat-slide-toggle>
+        </div>
+      </mat-tab>
+      <mat-tab label="Tab 4">
+        <ng-template mat-tab-label>
+          <mat-icon>build</mat-icon>
+        </ng-template>
+        No content
+      </mat-tab>
+    </mat-tab-group>
+      
+  </mat-card-content>
+</mat-card>
+
+
 
